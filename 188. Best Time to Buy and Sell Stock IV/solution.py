@@ -8,14 +8,14 @@ class Solution(object):
         l = len(prices)
         if l == 1:
             return 0
-
+        """
         if k >= l // 2:
             max_profit = 0
             for i in range(1, l):
                 if prices[i] > prices[i - 1]:
                     max_profit += prices[i] - prices[i - 1]
             return max_profit
-
+        """
         dp = [[0] * l for _ in range(k + 1)]
 
         for i in range(1, k + 1):
